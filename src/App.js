@@ -11,7 +11,7 @@ function App() {
     try {
       setError(null);
       setPet(null);
-      const response = await axios.get(`http://localhost:8080/pets/${petId}`);
+      const response = await axios.get(`http://localhost:9000/pets/${petId}`);
       setPet(response.data);
     } catch (err) {
       setError('Failed to fetch pet. Please try again.');
