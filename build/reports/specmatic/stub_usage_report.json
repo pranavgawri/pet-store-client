@@ -1,0 +1,1 @@
+{"specmaticConfigPath":"/Users/pranavgawri/Work/experiments/pet-store-client/specmatic.yaml","stubUsage":[{"type":"git","repository":"https://github.com/pranavgawri/api-contracts","specification":"pet-store.yaml","serviceType":"HTTP","operations":[{"path":"/pets/{petid}","method":"GET","responseCode":200,"count":2}]}]}

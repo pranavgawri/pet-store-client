@@ -34,6 +34,18 @@ jobs:
       run: npm run test:contract
       env:
         STUB_URL: http://localhost:9000
+    
+    - name: Run Specmatic Insights Github Build Reporter
+      uses: znsio/specmatic-insights-build-reporter-github-action@v2.0.2
+      with:
+        github-token: ${{ secrets.GH_REPOSITORY_TOKEN }}
+        org-id:  66e98ee05e232d36a28f7c6c
+        branch-ref: ${{ github.ref }}
+        branch-name: ${{ github.ref_name }}
+        build-id: ${{ github.run_id }}
+        repo-name: ${{ github.event.repository.name }}
+        repo-id: ${{ github.repository_id }}
+        repo-url: ${{ github.event.repository.html_url }}
 
     - name: Stop Specmatic stub
       if: always()
