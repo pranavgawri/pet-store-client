@@ -45,7 +45,7 @@ jobs:
         build-id: ${{ github.run_id }}
         repo-name: ${{ github.event.repository.name }}
         repo-id: ${{ github.repository_id }}
-        repo-url: ${{ github.event.repository.html_url }}
+        repo-url: ${{ github.event.repository.html_url }} 
 
     - name: Stop Specmatic stub
       if: always()
